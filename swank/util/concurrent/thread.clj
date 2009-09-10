@@ -18,8 +18,8 @@
 
 (defmacro dothread-keeping-clj [more-bindings & body]
   (let [clj-star-syms []
-  		;(filter #(re-find #"^\*.*\*$" (name %))
-                ;              (keys (ns-publics (find-ns 'clojure.core))))
+  		(filter #(re-find #"^\*.*\*$" (name %))
+                              (keys (ns-publics (find-ns 'clojure.core))))
 		]
     `(dothread-keeping [~@clj-star-syms ~@more-bindings]
        ~@body)))

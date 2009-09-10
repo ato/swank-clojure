@@ -133,7 +133,7 @@
      ;; Thread.stop was called on us it may be set and will cause an
      ;; InterruptedException in one of the send-to-emacs calls below
      (Thread/interrupted)
-     (set! *e t)
+     ;(set! *e t)
 
      ;; (.printStackTrace t #^java.io.PrintWriter *err*)
      ;; Throwing to top level, let emacs know we're aborting
